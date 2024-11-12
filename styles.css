@@ -1,0 +1,280 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(254, 255, 240);
+}
+
+.custom-pattern {
+  width: 100vw;
+  min-height: 100vh;
+
+  background: radial-gradient(
+        farthest-side at -33.33% 50%,
+        #0000 52%,
+        #00000010 54% 57%,
+        #0000 59%
+      )
+      0 calc(128px / 2),
+    radial-gradient(
+        farthest-side at 50% 133.33%,
+        #0000 52%,
+        #00000010 54% 57%,
+        #0000 59%
+      )
+      calc(128px / 2) 0,
+    radial-gradient(
+      farthest-side at 133.33% 50%,
+      #0000 52%,
+      #00000010 54% 57%,
+      #0000 59%
+    ),
+    radial-gradient(
+      farthest-side at 50% -33.33%,
+      #0000 52%,
+      #00000010 54% 57%,
+      #0000 59%
+    ),
+    #ffffff00;
+  background-size: calc(128px / 4.667) 128px, 128px calc(128px / 4.667);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 500ms;
+  background: linear-gradient(
+      90deg,
+      currentColor calc(100% / 3),
+      transparent 0 calc(200% / 3),
+      currentColor 0
+    )
+    var(--d, 0%) 100% /300% 1px no-repeat;
+}
+a:hover {
+  opacity: 50%;
+  --d: 100%;
+}
+
+.title {
+  text-align: center;
+  padding: 1px;
+  padding-top: 10px;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.title #title {
+  margin-bottom: 0;
+  color: black;
+  font-family: "DM Serif Text", serif;
+  font-size: clamp(1.25em, 3vw, 2.5em);
+  font-weight: 400;
+  font-style: normal;
+}
+
+.title #affliation {
+  color: black;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(0.75em, 1vw, 1.15em);
+  font-style: italic;
+}
+
+/* .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  max-width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-evenly;
+  color: black;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(0.8em, 1vmax, 1em);
+  font-weight: 500;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.navbar ul li a {
+  cursor: pointer;
+  transition: all 250ms;
+  background: linear-gradient(currentColor 0 0) bottom / var(--d, 0) 1px
+    no-repeat;
+  text-decoration: none;
+}
+.navbar ul li:hover {
+  --d: 100%;
+} */
+
+.img {
+  margin: 1vh;
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+}
+
+.img img {
+  max-height: 20vh;
+  border-radius: 20px;
+}
+
+/* .details {
+  margin: auto;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+} */
+
+/* .details p {
+  margin: 3px;
+  color: black;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(0.75em, 1vw, 1.15em);
+  font-weight: bold;
+} */
+
+.details {
+  margin: 2vh auto;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.details i {
+  justify-self: center;
+}
+
+.details p {
+  margin: 0;
+  justify-self: left;
+  color: black;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(0.75em, 1.25vw, 1em);
+  font-weight: bold;
+}
+
+.box-container {
+  margin: auto;
+  margin-top: 5vh;
+  max-width: 75%;
+  padding: calc(2vw + 10px);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 250ms;
+  backdrop-filter: blur(3px);
+}
+
+.box-container:hover {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.box-container > * {
+  color: black;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(0.8em, 1vw, 1em);
+  line-height: 1.75em;
+  list-style: square outside;
+}
+
+.section-title {
+  color: black;
+  font-family: "DM Serif Text", serif;
+  font-size: clamp(1.15em, 2vw, 2em);
+}
+
+.sub-title {
+  font-weight: bold;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.empty {
+  height: 5vh;
+}
+
+.images {
+  margin-top: 2vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1vw;
+  text-align: center;
+}
+
+.images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.images p {
+  margin: 0.5em auto;
+  color: #000000;
+  line-height: normal;
+}
+
+.schedule-info {
+  text-align: center;
+}
+
+.schedule-table {
+  max-width: calc(90% + 20px);
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 10px;
+}
+
+.schedule-table th {
+  text-align: left;
+  font-size: 1.25em;
+  padding-top: calc(3vh + 10px);
+  color: #333;
+}
+
+.schedule-table td {
+  border-top: 1px solid #ddd;
+}
+
+.session-header th {
+  border-bottom: 3px solid #ddd;
+  color: #333;
+}
+
+.schedule-table em {
+  font-style: italic;
+  color: #555;
+}
+
+.schedule-table td:first-child {
+  width: calc(10vw + 80px);
+  font-weight: 600;
+}
+
+.schedule-table #column-name {
+  font-weight: 600;
+}
